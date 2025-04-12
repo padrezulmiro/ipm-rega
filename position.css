@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 3vw 2vh 3vw;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-bar-menu-div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+#park-list-div {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.park-list-element {
+    border-style: solid;
+}
+
+.park-list-element-info {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-areas:
+    "map name name"
+    "map regions waterMax";
+    justify-items: center;
+    align-items: center;
+}
+
+.park-list-element-map {
+    grid-area: map;
+}
+
+.park-list-element-name {
+    grid-area: name;
+}
+
+.park-list-element-nregions {
+    grid-area: regions;
+}
+
+.park-list-element-water-max {
+    grid-area: waterMax;
+}
+
+#park-list-div ul {
+    padding-inline-start: 0px;
+}
+
+ul#park-list li {
+    list-style: none;
+}
+
+ul#park-list > li {
+    list-style: none;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+li.park-list-element-map > img {
+    width: 100%;
+    height: auto;
+}
+
+.top-bar-menu-div svg {
+    aspect-ratio: 1 / 1;
+    height: 5vh;
+    width: auto;
+    margin-right: 1em;
+}
+
+.help-text {
+
+}

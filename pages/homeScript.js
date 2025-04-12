@@ -2,14 +2,14 @@ const park1 = {
   parkName: "Pq. da Paz",
   numRegions: 11,
   waterConsumption: 2300,
-  mapUrl: ""
+  mapUrl: "../park-map-example.png"
 }
 
 const park2 = {
   parkName: "Pq. Urbano Comandante Julio Ferraz",
   numRegions: 6,
   waterConsumption: 540,
-  mapUrl: ""
+  mapUrl: "../park-map-example.png"
 }
 
 function main() {
@@ -38,14 +38,16 @@ function fillParkList(parkList) {
     // TODO(pip) Fill values in clone:
     // [] link URL
     // [] map img source URL
+    templateClone.querySelector("li.park-list-element-map > img").src = park
+      .mapUrl
     templateClone.querySelector("li.park-list-element-map > img").alt = park
       .parkName + "'s map"
     templateClone.querySelector("li.park-list-element-name").innerText = park
       .parkName
     templateClone.querySelector("li.park-list-element-nregions").innerText = park
-      .numRegions
+      .numRegions + " regions"
     templateClone.querySelector("li.park-list-element-water-max")
-                 .innerText = park.waterConsumption
+                 .innerText = park.waterConsumption + " L/d"
 
     parkListEl.appendChild(templateClone)
   }
