@@ -20,8 +20,7 @@ function main() {
 function initLocalStorage() {
   const isParksInStorage = localStorage.getItem("parks") !== null
   if (!isParksInStorage) {
-    const parks = [park1, park2]
-    localStorage.setItem("parks", JSON.stringify(parks))
+    resetLocalStorage()
   }
 }
 
@@ -51,8 +50,12 @@ function fillParkList(parkList) {
 
     parkListEl.appendChild(templateClone)
   }
-
   parkListDivEl.appendChild(parkListEl)
+}
+
+function resetLocalStorage() {
+  const parks = [park1, park2]
+  localStorage.setItem("parks", JSON.stringify(parks))
 }
 
 main()
