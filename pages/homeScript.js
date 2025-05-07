@@ -12,9 +12,11 @@ const park2 = {
   mapUrl: "../park-map-example.png"
 }
 
+
 function main() {
   initLocalStorage()
   fillParkList(JSON.parse(localStorage.getItem("parks")))
+
 }
 
 function initLocalStorage() {

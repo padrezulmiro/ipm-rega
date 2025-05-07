@@ -12,6 +12,15 @@ a {
     color: inherit;
 }
 
+button {
+    border-style: none;
+    background-color: inherit;
+}
+
+.display-none {
+    display: none;
+}
+
 .top-bar-menu-div {
     display: flex;
     flex-direction: row-reverse;
@@ -84,12 +93,11 @@ ul#park-list > li {
     display: inline;
 }
 
-
 #park-list-div ul {
     padding-inline-start: 0px;
 }
 
-ul#park-list > li {
+ul.park-list-element-info {
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -107,7 +115,7 @@ li.park-list-element-map > img {
 
 .help-text {}
 
-#draw-park-div {
+#draw-park-div, #drawn-park-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,28 +125,42 @@ li.park-list-element-map > img {
     margin-top: 3vh;
 }
 
-#draw-park-div #draw-map-img-1 {
-    aspect-ratio: 1.15;
-    width: 27vw;
-    height: auto;
+.park-map {
+    height: 98%;
+    width: auto;
 }
 
-#draw-park-div #draw-map-img-2 {
-    aspect-ratio: 0.5;
-    width: 40vw;
-    height: auto;
-    padding-top: 24vh;
+.park-map#pinpoint {
+    height: 20%;
+    width: auto;
 }
 
-#draw-park-div #draw-map-img-3 {
-    aspect-ratio: 0.77;
-    width: 67vw;
-    height: auto;
-    padding-top: 26vh;
-    padding-right: 21vw;
-    overflow-x: hidden;
+.park-map#complete-map {
+    height: 75%;
+    width: auto;
 }
 
-.display-none {
-    display: none;
+#park-map-blurred {
+    height: 75%;
+    width: auto;
+}
+
+#park-name-form-div {
+    z-index: 2;
+    position: absolute;
+    padding: 0.5em 0.1em 0.5em 0.1em;
+    background-color: white;
+    width: 90vw;
+
+
+}
+
+#park-name-form-div > label {
+    display: block;
+    font-size: 1.5em;
+}
+
+#park-name-form-div > input {
+    display: block;
+    font-size: 1.5em;
 }
