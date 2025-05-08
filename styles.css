@@ -35,11 +35,23 @@ button {
     width: 100%
 }
 
+.div-title {
+    font-size: 1.5em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
 #park-list-div {
     flex-grow: 2;
+    margin-block-start: 0.5em;
+}
+
+#park-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-block-start: 0.5em;
+    margin-block-end: 0em;
 }
 
 .park-list-element-info {
@@ -51,10 +63,14 @@ button {
     "map regions waterMax";
     justify-items: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .park-list-element-map {
     grid-area: map;
+    width: 25vw;
+    height: 12 vh;
 }
 
 .park-list-element-name {
@@ -73,12 +89,22 @@ button {
     border-style: solid;
 }
 
+.park-list-element > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 ul#park-list li {
     list-style: none;
 }
 
 ul#park-list > li {
     list-style: none;
+    width: 90vw;
+    height: 18vh;
 }
 
 #draw-park-div {
@@ -95,11 +121,6 @@ ul#park-list > li {
 
 #park-list-div ul {
     padding-inline-start: 0px;
-}
-
-ul.park-list-element-info {
-    padding-top: 2em;
-    padding-bottom: 2em;
 }
 
 li.park-list-element-map > img {
@@ -151,8 +172,6 @@ li.park-list-element-map > img {
     padding: 0.5em 0.1em 0.5em 0.1em;
     background-color: white;
     width: 90vw;
-
-
 }
 
 #park-name-form-div > label {

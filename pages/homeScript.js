@@ -2,14 +2,14 @@ const park1 = {
   parkName: "Pq. da Paz",
   numRegions: 11,
   waterConsumption: 2300,
-  mapUrl: "../park-map-example.png"
+  mapUrl: "../pq-da-paz-thumbnail.svg"
 }
 
 const park2 = {
-  parkName: "Pq. Urbano Comandante Julio Ferraz",
+  parkName: "Pq. Cmdte. Ferraz",
   numRegions: 6,
   waterConsumption: 540,
-  mapUrl: "../park-map-example.png"
+  mapUrl: "../pq-cmdte-ferraz-thumbnail.svg"
 }
 
 
@@ -36,9 +36,6 @@ function fillParkList(parkList) {
     // build html for each park
     const templateClone = parkLiTemplate.content.cloneNode(true)
 
-    // TODO(pip) Fill values in clone:
-    // [] link URL
-    // [] map img source URL
     templateClone.querySelector("li.park-list-element-map > img").src = park
       .mapUrl
     templateClone.querySelector("li.park-list-element-map > img").alt = park

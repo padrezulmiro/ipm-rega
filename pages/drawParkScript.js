@@ -176,4 +176,14 @@ function confirmNewMap(event) {
   }
 }
 
+function saveNewParkToLocalStorage(parkName) {
+  const newPark = {
+    parkName: parkName,
+    numRegions: 3,
+    waterConsumption: 50,
+    mapUrl: "../new-park-thumbnail.svg"
+  }
+  let localStorageParks = localStorage.getItem("parks")
+}
+
 main()
