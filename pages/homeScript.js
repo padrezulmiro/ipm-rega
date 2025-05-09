@@ -45,7 +45,7 @@ function fillParkList(parkList) {
     templateClone.querySelector("li.park-list-element-nregions").innerText = park
       .numRegions + " regions"
     templateClone.querySelector("li.park-list-element-water-max")
-                 .innerText = park.waterConsumption + " L/d"
+                 .innerText = "\u{1F4A7} " + park.waterConsumption + " L/d"
 
     parkListEl.appendChild(templateClone)
   }

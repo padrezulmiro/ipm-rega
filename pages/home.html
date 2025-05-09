@@ -10,52 +10,56 @@
 
     </head>
     <body>
-        <div class="top-bar-menu-div">
-            <a href="drawPark.html" class="top-bar-menu-button">
+        <header class="top-bar-menu-div">
+            <h1>Smart Parks</h1>
+            <a href="drawPark.html" class="top-bar-menu-button add-new-park-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                     fill="currentColor" class="bi bi-plus-circle"
-                     viewBox="0 0 16 16">
+                    fill="currentColor" class="bi bi-plus-circle"
+                    viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
                 </svg>
             </a>
+        </header>
+        <div id="app-container">
+            <div id="park-list-div">
+                <h1 class="div-title">My parks</h1>
+                <template id="park-list-element-template">
+                    <li class="park-list-element">
+                        <a href="">
+                            <ul class="park-list-element-info">
+                                <li class="park-list-element-map">
+                                    <img src="" alt="This park's map"/>
+                                </li>
+                                <li class="park-list-element-name"></li>
+                                <li class="park-list-element-nregions"></li>
+                                <li class="park-list-element-water-max"></li>
+                            </ul>
+                        </a>
+                    </li>
+                </template>
+            </div>
+            <div id="help-add-park">
+                <p class="help-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-info-circle"
+                        viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg>
+                    Click on
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                        fill="currentColor" class="bi bi-plus-circle"
+                        viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg>
+                    to add a park
+                </p>
+            </div>
         </div>
-        <div id="park-list-div">
-            <h1 class="div-title">My parks</h1>
-            <template id="park-list-element-template">
-                <li class="park-list-element">
-                    <a href="">
-                        <ul class="park-list-element-info">
-                            <li class="park-list-element-map">
-                                <img src="" alt="This park's map"/>
-                            </li>
-                            <li class="park-list-element-name"></li>
-                            <li class="park-list-element-nregions"></li>
-                            <li class="park-list-element-water-max"></li>
-                        </ul>
-                    </a>
-                </li>
-            </template>
-        </div>
-        <div id="help-add-park">
-            <p class="help-text">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                     fill="currentColor" class="bi bi-info-circle"
-                     viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                    <path
-                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                </svg>
-                Click on
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                     fill="currentColor" class="bi bi-plus-circle"
-                     viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                </svg>
-                to add a park
-            </p>
-        </div>
+        <footer class="bottom-bar"></div>
         <script type="text/javascript" src="homeScript.js"></script>
     </body>
 </html>

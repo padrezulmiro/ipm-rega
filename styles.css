@@ -1,10 +1,14 @@
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em;
+}
+
+#app-container {
     display: flex;
     flex-direction: column;
-    margin: 2vh 3vw 2vh 3vw;
+    margin: 2% 3% 2% 3%;
     align-items: center;
-
-    font-family: Arial, Helvetica, sans-serif;
+    height: 96%;
 }
 
 a {
@@ -22,9 +26,35 @@ button {
 }
 
 .top-bar-menu-div {
+    justify-items: center;
+    width: 100%;
+    height: 6.5vh;
+    margin-bottom: 1vh;
+    background-color: #85e278;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas:
+    "btn1 appname btn2";
+}
+
+.top-bar-menu-div > h1 {
+    grid-area: appname;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.top-bar-menu-div > .add-new-park-btn {
+    grid-area: btn2;
     display: flex;
-    flex-direction: row-reverse;
-    align-self: flex-end;
+    align-items: center;
+}
+
+.top-bar-menu-button svg {
+    aspect-ratio: 1 / 1;
+    height: 5vh;
+    width: auto;
 }
 
 .top-bar-menu-div-back {
@@ -57,7 +87,7 @@ button {
 .park-list-element-info {
     display: grid;
     grid-template-rows: 50% 50%;
-    grid-template-columns: 33% 33% 34%;
+    grid-template-columns: 40% 30% 30%;
     grid-template-areas:
     "map name name"
     "map regions waterMax";
@@ -69,24 +99,34 @@ button {
 
 .park-list-element-map {
     grid-area: map;
-    width: 25vw;
-    height: 12 vh;
+    width: 80%;
+    height: auto;
 }
 
 .park-list-element-name {
     grid-area: name;
+    justify-self: start;
+    align-self: end;
+    margin-bottom: 0.3em;
+    font-weight: bold;
 }
 
 .park-list-element-nregions {
     grid-area: regions;
+    justify-self: start;
+    align-self: start;
+    margin-top: 0.3em;
 }
 
 .park-list-element-water-max {
     grid-area: waterMax;
+    justify-self: start;
+    align-self: start;
+    margin-top: 0.3em;
 }
 
 .park-list-element {
-    border-style: solid;
+
 }
 
 .park-list-element > a {
@@ -126,12 +166,6 @@ ul#park-list > li {
 li.park-list-element-map > img {
     width: 100%;
     height: auto;
-}
-
-.top-bar-menu-button svg {
-    aspect-ratio: 1 / 1;
-    height: 5vh;
-    width: auto;
 }
 
 .help-text {}
@@ -182,4 +216,14 @@ li.park-list-element-map > img {
 #park-name-form-div > input {
     display: block;
     font-size: 1.5em;
+}
+
+footer.bottom-bar {
+    width: 100%;
+    height: 7vh;
+    background-color: #85e278;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
