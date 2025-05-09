@@ -26,7 +26,6 @@ button {
 }
 
 .top-bar-menu-div {
-    justify-items: center;
     width: 100%;
     height: 6.5vh;
     margin-bottom: 1vh;
@@ -40,6 +39,7 @@ button {
 }
 
 .top-bar-menu-div > h1 {
+    font-size: 1.7em;
     grid-area: appname;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -55,6 +55,10 @@ button {
     aspect-ratio: 1 / 1;
     height: 5vh;
     width: auto;
+}
+
+.top-bar-menu-div > .top-bar-menu-button.accept-btn {
+    grid-area: btn2
 }
 
 .top-bar-menu-div-back {
@@ -100,7 +104,7 @@ button {
 .park-list-element-map {
     grid-area: map;
     width: 80%;
-    height: auto;
+    height: 80%;
 }
 
 .park-list-element-name {
@@ -165,7 +169,8 @@ ul#park-list > li {
 
 li.park-list-element-map > img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .help-text {}

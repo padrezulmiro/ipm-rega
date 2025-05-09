@@ -173,6 +173,7 @@ function confirmNewMap(event) {
   } else {
     const newParkName = parkNameInputEl.value
     console.log("New park's name will be " + newParkName + "!")
+    saveNewParkToLocalStorage(newParkName)
   }
 }
 
@@ -183,7 +184,15 @@ function saveNewParkToLocalStorage(parkName) {
     waterConsumption: 50,
     mapUrl: "../new-park-thumbnail.svg"
   }
-  let localStorageParks = localStorage.getItem("parks")
+
+  let localStorageParks = JSON.parse(localStorage.getItem("parks"))
+  if (localStorageParks.length < 3) {
+    localStorageParks.push(newPark)
+  } else {
+    localStorageParks[2] = newPark
+  }
+  localStorage.setItem("parks", JSON.stringify(localStorageParks))
+  window.location.assign("./home.html")
 }
 
 main()
