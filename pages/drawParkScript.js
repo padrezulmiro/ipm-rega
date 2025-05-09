@@ -1,9 +1,9 @@
 let parkDrawingsIndex = 0
-let mapConfirmed = false
 const drawParkDivEl = document.getElementById("draw-park-div")
 const drawParkImgEl = document.getElementById("draw-park-img")
 const drawParkDivImgChildren = drawParkDivEl.querySelectorAll("img.park-map")
 const checkButtonEl = document.getElementById("map-check-btn")
+const parkNameFormDiv = document.getElementById("park-name-form-div")
 
 class Line {
   static directions = {
@@ -133,7 +133,7 @@ class ParkMapDrawing {
 function main() {
   drawParkDivEl.addEventListener("click", changeMapImage)
   checkButtonEl.addEventListener("click", confirmNewMap)
-
+  parkNameFormDiv.style.display = "none"
 }
 
 function changeMapImage() {
@@ -160,21 +160,23 @@ function confirmNewMap(event) {
 
   const completeMapEl = document.getElementById("complete-map")
   const blurredMapEl = document.getElementById("park-map-blurred")
-  const parkNameFormDiv = document.getElementById("park-name-form-div")
-  const parkNameInputEl = document.getElementById("new-park-name-input")
+  const saveParkDetailsBtn = document.getElementById("save-park-details-btn")
 
-  if (!mapConfirmed) {
-    completeMapEl.style.display = "none"
-    blurredMapEl.style.display = "inline"
-    parkNameFormDiv.style.display = "flex"
-    parkNameFormDiv.style.flexDirection = "column"
-    parkNameFormDiv.style.justifyContent = "space-around"
-    mapConfirmed = true
-  } else {
-    const newParkName = parkNameInputEl.value
-    console.log("New park's name will be " + newParkName + "!")
-    saveNewParkToLocalStorage(newParkName)
-  }
+  completeMapEl.style.display = "none"
+  blurredMapEl.style.display = "inline"
+  parkNameFormDiv.style.display = ""
+  checkButtonEl.style.display = "none"
+
+  saveParkDetailsBtn.addEventListener("click", saveNewMapDetails)
+}
+
+function saveNewMapDetails(event) {
+  event.preventDefault()
+
+  const parkNameInputEl = document.getElementById("new-park-name-input")
+  const newParkName = parkNameInputEl.value
+  console.log("New park's name will be " + newParkName + "!")
+  saveNewParkToLocalStorage(newParkName)
 }
 
 function saveNewParkToLocalStorage(parkName) {

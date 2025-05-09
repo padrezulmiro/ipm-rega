@@ -45,12 +45,15 @@
                 <!-- TODO(pip) Address clipping -->
 
                 <img id="park-map-blurred" src="../new-park-blurred.svg"/>
-                <div id="park-name-form-div" class="display-none">
-                    <label for="park-name">New park's name</label>
-                    <input id="new-park-name-input" type="text" name="park-name"/>
-                </div>
             </div>
             <div id="help-add-park"> </div>
+        </div>
+        <div id="park-name-form-div" class="display-none">
+            <h1>New park's details</h1>
+            <label for="park-name">New park's name</label>
+            <input id="new-park-name-input" type="text" name="park-name"
+                   placeholder="Enter a new name..."/>
+            <button id="save-park-details-btn">Save park</button>
         </div>
         <footer class="bottom-bar"></footer>
         <script type="text/javascript" src="drawParkScript.js"></script>
