@@ -2,14 +2,16 @@ const park1 = {
   parkName: "Pq. da Paz",
   numRegions: 11,
   waterConsumption: 2300,
-  mapUrl: "../pq-da-paz-thumbnail.svg"
+  mapUrl: "../pq-da-paz-thumbnail.svg",
+  editParkUrl: ""
 }
 
 const park2 = {
   parkName: "Pq. Cmdte. Ferraz",
   numRegions: 6,
   waterConsumption: 540,
-  mapUrl: "../pq-cmdte-ferraz-thumbnail.svg"
+  mapUrl: "../pq-cmdte-ferraz-thumbnail.svg",
+  editParkUrl: ""
 }
 
 
@@ -36,6 +38,11 @@ function fillParkList(parkList) {
     // build html for each park
     const templateClone = parkLiTemplate.content.cloneNode(true)
 
+    if (park.editParkUrl !== "") {
+      templateClone.querySelector("li.park-list-element > a").href =
+        park.editParkUrl
+    }
+
     templateClone.querySelector("li.park-list-element-map > img").src = park
       .mapUrl
     templateClone.querySelector("li.park-list-element-map > img").alt = park
@@ -45,7 +52,7 @@ function fillParkList(parkList) {
     templateClone.querySelector("li.park-list-element-nregions").innerText = park
       .numRegions + " regions"
     templateClone.querySelector("li.park-list-element-water-max")
-                 .innerText = "\u{1F4A7} " + park.waterConsumption + " L/d"
+      .innerText = "\u{1F4A7} " + park.waterConsumption + " L/d"
 
     parkListEl.appendChild(templateClone)
   }
