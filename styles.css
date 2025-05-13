@@ -79,6 +79,16 @@ fieldset {
     width: 100%
 }
 
+footer.bottom-bar {
+    width: 100%;
+    height: 7vh;
+    background-color: #85e278;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .div-title {
     font-size: 1.5em;
     margin-block-start: 0em;
@@ -215,7 +225,7 @@ li.park-list-element-map > img {
 /* TODO(pip) change park-name-form-div to a more generic abstract name */
 .bottom-to-top-form-section,
 #park-name-form-div {
-    z-index: 2;
+    z-index: 10;
     position: fixed;
     top: 34vh;
     width: 100vw;
@@ -229,17 +239,20 @@ li.park-list-element-map > img {
     justify-content: flex-start;
 }
 
+.bottom-to-top-form-section > *,
 #park-name-form-div > * {
     width: 98%;
     padding-left: 1%;
 }
 
 
+.bottom-to-top-form-section > h1,
 #park-name-form-div > h1 {
     text-align: center;
     font-size: 1.6em;
 }
 
+.bottom-to-top-form-section > label,
 #park-name-form-div > label {
     font-size: 1.3em;
     margin-bottom: 0.4em;
@@ -269,18 +282,12 @@ li.park-list-element-map > img {
     width: auto;
 }
 
-footer.bottom-bar {
-    width: 100%;
-    height: 7vh;
-    background-color: #85e278;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+
 
 .edit-park-field {
     font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
 }
 
 .edit-park-field > * {
@@ -289,4 +296,30 @@ footer.bottom-bar {
 .edit-park-field > input {
     font-size: 1.2em;
     width: 100%
+}
+
+.edit-area-btn {
+    position: absolute;
+    z-index: 5;
+
+    color: white;
+    background-color: #2a4252;
+
+    width: 30%;
+    height: 5%;
+}
+
+#edit-area-btn-1 {
+    top: 24vh;
+    left: 34vw;
+}
+
+#edit-area-btn-2 {
+    top: 40vh;
+    left: 12vw;
+}
+
+#edit-area-btn-3 {
+    top: 73vh;
+    left: 34vw;
 }

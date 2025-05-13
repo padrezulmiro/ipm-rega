@@ -23,23 +23,32 @@
             <h1>Edit park</h1>
         </header>
         <div id="app-container">
-            <h1>New Park</h1>
+            <h1 id="park-name-h1"></h1>
             <div id="edit-park-div">
                 <img id="edit-park-img" class="park-map"
-                     src="../park-area-original.svg"/>
+                     src="../new-park-thumbnail.svg"/>
+                <div id="edit-area-btns">
+                    <button id="edit-area-btn-1" class="edit-area-btn" disabled>
+                        Ryegrass &#128167;&#128167;
+                    </button>
+                    <button id="edit-area-btn-2" class="edit-area-btn" disabled>
+                        Roses &#128167;&#128167;&#128167;
+                    </button>
+                    <button id="edit-area-btn-3" class="edit-area-btn">
+                    </button>
+                </div>
             </div>
         <div class="bottom-to-top-form-section" id="park-name-form-div">
-            <h1>Editing area: Cacti</h1>
+            <h1 id="area-name-h1"></h1>
             <fieldset class="edit-park-field area-name">
                 <label for="area-name-input">Area name</label>
-                <input id="area-name-input" type="text" placeholder="Cacti"/>
+                <input id="area-name-input" type="text"/>
             </fieldset>
             <fieldset class="edit-park-field water-level">
                 <label for="water-level-input">Water level</label>
                 <input id="water-level-input" type="range" min="1" max="3"
                        step="1" value="3" />
                 <label for="water-level-input" id="water-level-selected-value">
-                    &#128167;&#128167;&#128167;
                 </label>
             </fieldset>
             <button id="save-park-details-btn">Save area</button>
