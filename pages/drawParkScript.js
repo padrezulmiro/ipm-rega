@@ -175,7 +175,6 @@ function saveNewMapDetails(event) {
 
   const parkNameInputEl = document.getElementById("new-park-name-input")
   const newParkName = parkNameInputEl.value
-  console.log("New park's name will be " + newParkName + "!")
   saveNewParkToLocalStorage(newParkName)
 }
 

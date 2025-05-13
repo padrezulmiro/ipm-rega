@@ -13,6 +13,7 @@ function main() {
   saveDetailsBtn.addEventListener("click", saveArea)
   waterLevelInput.addEventListener("input", waterLevelChange)
   editAreaBtn3.addEventListener("click", startAreaEdit)
+  parkImgEl.addEventListener("click", addSprinkler)
 }
 
 function initHTML() {
@@ -60,8 +61,6 @@ function saveArea(event) {
 }
 
 function waterLevelChange() {
-  console.log("Changed water level value to " + waterLevelInput.value)
-
   const waterLevelInputValueEl = document
         .getElementById("water-level-selected-value")
   switch(waterLevelInput.value) {
@@ -78,9 +77,11 @@ function waterLevelChange() {
 
 function startAreaEdit(event) {
   event.preventDefault()
-  console.log("Will start to edit area!")
-
   areaDetailsSection.style.display = ""
+}
+
+function addSprinkler(event) {
+  console.log("Will add sprinkler!")
 }
 
 main()
