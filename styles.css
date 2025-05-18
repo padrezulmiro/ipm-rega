@@ -258,6 +258,7 @@ li.park-list-element-map > img {
     margin-bottom: 0.4em;
 }
 
+.bottom-to-top-form-section > input,
 #park-name-form-div > input {
     font-size: 1.2em;
     width: 90%;
@@ -265,6 +266,7 @@ li.park-list-element-map > img {
     border-width: 1px;
 }
 
+.bottom-to-top-form-section > button,
 #park-name-form-div > button {
     margin-top: auto;
     margin-bottom: 5vh;
@@ -305,22 +307,35 @@ li.park-list-element-map > img {
     color: white;
     background-color: #2a4252;
     border-radius: 15px;
+    font-size: 1.2em;
 
-    width: 30%;
-    height: 5%;
+    width: 40%;
+    height: 7%;
 }
 
 #edit-area-btn-1 {
     top: 24vh;
-    left: 34vw;
+    left: 30vw;
 }
 
 #edit-area-btn-2 {
     top: 40vh;
-    left: 12vw;
+    left: 8vw;
 }
 
 #edit-area-btn-3 {
     top: 73vh;
-    left: 34vw;
+    left: 30vw;
+}
+
+.edit-sprinkler-type {
+    font-size: 1.7em;
+}
+
+#sprinkler-select-input {
+    font-size: 1.2em;
+}
+
+#sprinkler-select-input > option {
+    font-size: 0.7em;
 }

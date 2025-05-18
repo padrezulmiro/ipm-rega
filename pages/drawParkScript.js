@@ -187,6 +187,7 @@ function saveNewParkToLocalStorage(parkName) {
     editParkUrl: "editPark.html",
     areaName: "Cacti",
     areaWaterLevel: 3,
+    editMapUrl: "../new-park-thumbnail.svg"
   }
 
   let localStorageParks = JSON.parse(localStorage.getItem("parks"))
